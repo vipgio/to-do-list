@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+	--main-color: rgb(97, 219, 251);
+	--main-gray: rgb(58, 63, 73);
+}
+* {
+	font-family: "Quicksand";
+	padding: 2px;
+}
+body {
+	background-color: var(--main-color);
+	overflow: hidden;
+}
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 94vh;
+}
+.content {
+	width: 700px;
+	height: 500px;
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 20px;
+	background-color: var(--main-gray);
+	border-radius: 3px;
+	box-shadow: 7px 7px 7px rgb(80, 179, 206);
+}
+.navbar {
+	display: flex;
+}
+.navbar .date,
+.navbar .task-categories {
+	display: inline-block;
+	padding: 10px 0;
+	color: white;
+}
+.navbar .date {
+	display: flex;
+	flex-direction: column;
+}
+.navbar .task-categories {
+	margin-left: auto;
+}
+.navbar .task-categories button {
+	background: none;
+	border: none;
+	display: inline-block;
+	text-decoration: none;
+	color: rgb(140, 145, 152);
+	cursor: pointer;
+	margin-right: 20px;
+}
+.navbar .task-categories button:focus {
+	color: white;
+}
+.navbar .tasks-left {
+	color: var(--main-color);
+	font-size: small;
+}
+.create,
+.tasks {
+	display: inline-block;
+}
+.create {
+	padding-bottom: 8px;
+}
+.create button {
+	background: var(--main-color);
+	display: inline-block;
+	color: #fff;
+	border: 0;
+	margin-left: 8px;
+	border-radius: 3px;
+	cursor: pointer;
+	height: 29px;
+	padding: 0 10px;
+}
+.create input {
+	border: none;
+	height: 25px;
+	width: 300px;
+	border-radius: 3px;
+	padding: 2px 8px;
+}
+.create input:focus {
+	outline: none;
+}
+.create button {
+	left: 100px;
+}
+/* tasks box */
+.tasks {
+	color: white;
+	max-height: 400px;
+	position: relative;
+}
+.box .tasks .task-row {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid gray;
+	/* border-top: 1px solid white; */
+}
+.box .tasks .task-row:first-child {
+	border-top: 1px solid gray;
+	margin-top: 8px;
+}
+.tasks p {
+	text-align: left;
+	padding: 0px 10px;
+}
+.tasks .each-task {
+	display: inline-block;
+}
+.tasks .trash {
+	cursor: pointer;
+	color: gray;
+	width: 20px;
+	margin-left: auto;
+}
+.tasks .trash:hover {
+	color: red;
+}
+.tasks .top-shadow {
+	background-image: linear-gradient(rgba(58, 63, 73, 1), rgba(58, 63, 73, 0));
+	height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 7px;
+	z-index: 1;
+}
+.tasks .bottom-shadow {
+	background-image: linear-gradient(rgba(58, 63, 73, 0), rgba(58, 63, 73, 1));
+	height: 8px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 7px;
+	z-index: 1;
+}
+.shadow-container {
+	color: white;
+	max-height: 330px;
+	overflow-y: auto;
+	position: relative;
+}
+.tasks .checkmark {
+	cursor: pointer;
+	color: gray;
+	width: 20px;
+}
+.tasks .checkmark:hover {
+	color: white;
+}
+.tasks .x-button {
+	cursor: pointer;
+	color: white;
+	width: 20px;
+}
+.tasks .x-button:hover {
+	color: gray;
+}
+.empty {
+	color: white;
+	text-align: center;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: gray;
+}
+::-webkit-scrollbar-thumb {
+	background: #f1f1f1b9;
+}
