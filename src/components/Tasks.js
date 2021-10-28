@@ -42,7 +42,7 @@ const Tasks = () => {
 	) : !showCompleted ? (
 		<div className='empty'>No more tasks left</div>
 	) : (
-		<div className='empty'>Nooo task is done</div>
+		<div className='empty'>No task is done</div>
 	);
 };
 
